@@ -1,4 +1,4 @@
-import {Directive, EventEmitter, HostListener, inject, Output} from '@angular/core';
+import {Directive, HostListener, inject, output} from '@angular/core';
 import {FormGroupDirective, NgForm} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {TranslateService} from '@ngx-translate/core';
@@ -9,7 +9,7 @@ import {MAT_SUBMIT_WHEN_VALID_CONFIG} from './config';
   standalone: true,
 })
 export class SubmitWhenValidDirective {
-  @Output() readonly appSubmitWhenValid = new EventEmitter<NgForm | FormGroupDirective>();
+  readonly matSubmitWhenValid = output<NgForm | FormGroupDirective>();
 
   private readonly ngForm? = inject(NgForm, {optional: true});
 
@@ -38,7 +38,7 @@ export class SubmitWhenValidDirective {
       return false;
     }
 
-    this.appSubmitWhenValid.emit(form);
+    this.matSubmitWhenValid.emit(form);
 
     return true;
   }
