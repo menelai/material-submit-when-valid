@@ -1,0 +1,31 @@
+{
+  "name": "@kovalenko/material-submit-when-valid",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/core": ">=19",
+    "@angular/material": ">=19",
+    "@angular/cdk": ">=19",
+    "@ngx-translate/core": ">=16"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/menelai/material-submit-when-valid.git"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "form"
+  ],
+  "author": "Kovalenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/menelai/material-submit-when-valid/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
