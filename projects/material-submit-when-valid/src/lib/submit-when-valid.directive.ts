@@ -30,7 +30,11 @@ export class SubmitWhenValidDirective {
     }
 
     if (form.invalid) {
-      this.snackBar.open(this.translate.instant('Check form validity'), undefined, this.config);
+      this.snackBar.open(
+        this.translate.instant('Check form validity'),
+        undefined,
+        this.config,
+      );
       return false;
     }
 
